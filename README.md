@@ -3,8 +3,9 @@
 # Prerequests  
 1. Docker installed on your OS
 # Get started
-1. download this project
-2. in cmd (command promt) go to root of this project
+1. create folder
+2. open cmd in this folder (this will be the root of our project)
+3. type **git clone https://github.com/YaroslavGrushko/node-js-docker.git .**
 3. type **docker-compose build**
 4. type **docker images -a** to see images that has been generated
 5. type **docker-compose up**
