@@ -1,0 +1,29 @@
+version: "2"
+services:
+ my-mongodb:
+  image: mongo
+  networks:
+   - nodeapp-network
+
+ server:
+  build:
+   context: ./server/
+  ports:
+    - "127.0.0.1:5000:5000"
+  networks:
+    - nodeapp-network
+  depends_on:
+    - my-mongodb 
+  command: >
+       bash -c "npm run createDb
+       && npm start"
+
+ client:
+  build:
+   context: ./client/
+  ports:
+      - "127.0.0.1:8080:80"
+
+networks:
+ nodeapp-network:
+  driver: bridge

@@ -1,0 +1,28 @@
+{
+    "name": "reactexpress",
+    "version": "1.0.0",
+    "description": "Boilarplaite for node.js express and react.js",
+    "main": "server.js",
+    "scripts": {
+        "client-install": "cd client && npm install",
+        "start": "node server.js",
+        "createDb": "node createDb.js",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "author": "Yaroslav, Denis",
+    "license": "MIT",
+    "dependencies": {
+        "concurrently": "^4.0.1",
+        "express": "^4.16.3",
+        "mongodb": "^3.1.8",
+        "mongoose": "^5.3.3",
+        "nconf": "^0.10.0",
+        "winston": "^3.1.0"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.4"
+    },
+    "homepage": "http://localhost:3000/"
+}
