@@ -6,5 +6,9 @@
             "keepAlive": 1,
             "useNewUrlParser": true
         }
+    },
+    "log": {
+        "info-file": "combined.log",
+        "error-file": "error.log"
     }
 }

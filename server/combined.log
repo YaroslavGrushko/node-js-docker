@@ -1,46 +1,25 @@
-{"timestamp":"2018-11-14T13:02:48.461Z","message":"Master cluster setting up 8 workers...","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.782Z","message":"Worker 8384 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.792Z","message":"Worker 13572 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.818Z","message":"Worker 4852 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.822Z","message":"Worker 9768 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.828Z","message":"Worker 8588 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.829Z","message":"Worker 5104 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.838Z","message":"Worker 13884 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:48.927Z","message":"Worker 3792 is online","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.741Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.747Z","message":"Process 13572 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.789Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.794Z","message":"Process 4852 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.790Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.796Z","message":"Process 8384 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.794Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.802Z","message":"Process 8588 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.816Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.823Z","message":"Process 9768 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.827Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.831Z","message":"Process 13884 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.831Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.838Z","message":"Process 5104 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.896Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T13:02:49.900Z","message":"Process 3792 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:25:22.145Z","message":"Master cluster setting up 2 workers...","level":"info"}
-{"timestamp":"2018-11-14T14:25:22.200Z","message":"Worker 48 is online","level":"info"}
-{"timestamp":"2018-11-14T14:25:22.206Z","message":"Worker 53 is online","level":"info"}
-{"timestamp":"2018-11-14T14:25:23.487Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:25:23.489Z","message":"Process 48 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:25:23.492Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:25:23.495Z","message":"Process 53 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:29:57.778Z","message":"Master cluster setting up 2 workers...","level":"info"}
-{"timestamp":"2018-11-14T14:29:57.835Z","message":"Worker 48 is online","level":"info"}
-{"timestamp":"2018-11-14T14:29:57.843Z","message":"Worker 53 is online","level":"info"}
-{"timestamp":"2018-11-14T14:29:59.283Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:29:59.286Z","message":"Process 48 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:29:59.285Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:29:59.289Z","message":"Process 53 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:32:14.110Z","message":"Master cluster setting up 2 workers...","level":"info"}
-{"timestamp":"2018-11-14T14:32:14.174Z","message":"Worker 66 is online","level":"info"}
-{"timestamp":"2018-11-14T14:32:14.176Z","message":"Worker 71 is online","level":"info"}
-{"timestamp":"2018-11-14T14:32:15.725Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:32:15.728Z","message":"Process 71 is listening to all incoming requests on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:32:15.727Z","message":"Server started on port 5000","level":"info"}
-{"timestamp":"2018-11-14T14:32:15.731Z","message":"Process 66 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.071Z","message":"Master cluster setting up 8 workers...","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.361Z","message":"Worker 5960 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.368Z","message":"Worker 720 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.371Z","message":"Worker 7988 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.389Z","message":"Worker 6432 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.391Z","message":"Worker 1768 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.441Z","message":"Worker 10876 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.449Z","message":"Worker 10572 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:18.450Z","message":"Worker 8652 is online","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.136Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.140Z","message":"Process 5960 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.137Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.141Z","message":"Process 720 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.138Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.144Z","message":"Process 1768 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.143Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.146Z","message":"Process 7988 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.163Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.168Z","message":"Process 6432 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.199Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.204Z","message":"Process 10876 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.204Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.210Z","message":"Process 10572 is listening to all incoming requests on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.234Z","message":"Server started on port 5000","level":"info"}
+{"timestamp":"2018-11-15T08:51:19.237Z","message":"Process 8652 is listening to all incoming requests on port 5000","level":"info"}

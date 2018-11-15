@@ -1,3 +1,4 @@
+var log = require('./libs/log')(module);
 // module for processing requests/response to(from) static content {located on the server}  with correct meta-data.
 // means that this module takes request, response from app.js and returns response with static content
 const customers = [
@@ -42,11 +43,11 @@ function StaticContent(current_request, current_response) {
     var host = this.request.headers['host'];
     // request headers validation
     // host must be defined and defined as 'localhost:5000'
-    if (host && host == 'localhost:5000') console.log('++ host from request headers is validated successfully, host: ' + host);
+    if (host && host == 'localhost:5000') log.info('++ host from request headers is validated successfully, host: ' + host);
     // let's imagine that we need Chroom browser,
     //so user agent must be defined and be Chroom browser
     var userAgent = this.request.headers['user-agent'];
-    if (userAgent && userAgent.includes('Chrome')) console.log('++ user agent from request headers is validated successfully, user agent: ' + userAgent);
+    if (userAgent && userAgent.includes('Chrome')) log.info('++ user agent from request headers is validated successfully, user agent: ' + userAgent);
 
 
     var staticContent = " ";
@@ -57,6 +58,7 @@ function StaticContent(current_request, current_response) {
         if (type == 'places') {
             // TEMPORARY>>>>> 
             //get PLACES from Db/getPlaces module
+            log.info('get Data from Db/getPlaces module in async mode');
             var PLACESmod = require("./Db/getPlaces");
             PLACESmod(function(PLACES) {
                     // let's return PLACES

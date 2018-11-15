@@ -1,4 +1,6 @@
 var winston = require('winston');
+// configuaration file:
+var config = require('../config');
 var ENV = process.env.NODE_ENV;
 
 function getLogger(module) {
@@ -25,11 +27,11 @@ function getLogger(module) {
             // - Write all logs error (and below) to `error.log`.
             //
             new winston.transports.File({
-                filename: 'error.log',
+                filename: config.get('log:error-file'),
                 level: 'error'
             }),
             new winston.transports.File({
-                filename: 'combined.log',
+                filename: config.get('log:info-file'),
                 label: path
             }),
         ],
