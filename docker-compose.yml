@@ -10,6 +10,8 @@ services:
    context: ./server/
   ports:
     - "127.0.0.1:5000:5000"
+  #volumes:
+  # - ./server/:/usr/app/
   networks:
     - nodeapp-network
   depends_on:

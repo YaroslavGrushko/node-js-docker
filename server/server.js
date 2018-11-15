@@ -1,64 +1,61 @@
 const express = require('express');
 var config = require('./config');
 var log = require('./libs/log')(module);
-// var HttpError = require('./error').HttpError;
-const app = express();
-app.set('port', config.get('port'));
-//get static contentt processing module
-var StaticContent = require("./static_content_processing");
-// deal with Access-Control-Allow-Origin bag on client request
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    next();
-});
-// middleware '/api/places'
-app.use((req, res, next) => {
-    if (req.url == '/api/places') {
-        //create static content processing module
-        var staticContent = new StaticContent(req, res);
-        // get stat. content and perform response to front-end
-        var type = 'places';
-        staticContent.getStaticContent(type);
-    } else {
-        // let's go to next middleware
-        next();
+var cluster = require('cluster');
+
+if (cluster.isMaster) {
+    var numWorkers = require('os').cpus().length;
+
+    log.info('Master cluster setting up ' + numWorkers + ' workers...');
+
+    for (var i = 0; i < numWorkers; i++) {
+        cluster.fork();
     }
-});
-// app.use(require('./middleware/sendHttpError'));
-// require('./routes')(app);
-// error handler middleware
-// app.use(function(err, req, res, next) {
-//     if (typeof err == 'number') { // next(404);
-//         err = new HttpError(err);
-//     }
 
-//     if (err instanceof HttpError) {
-//         res.sendHttpError(err);
-//     } else {
-//         if (app.get('env') == 'development') {
-//             express.errorHandler()(err, req, res, next);
-//         } else {
-//             log.error(err);
-//             err = new HttpError(500);
-//             res.sendHttpError(err);
-//         }
-//     }
-// });
-// processing our favicon.ico
-// app.use(express.favicon());
+    cluster.on('online', function(worker) {
+        log.info('Worker ' + worker.process.pid + ' is online');
+    });
 
-// let's log our requests
-//  NOTE: express.logger('dev') is removed from express module.
-// use logger like morgan.
-// app.use(express.logger('dev'));
+    cluster.on('exit', function(worker, code, signal) {
+        log.info('Worker ' + worker.process.pid + ' died with code: ' + code + ', and signal: ' + signal);
+        log.info('Starting a new worker');
+        cluster.fork();
+    });
+} else {
+    // create node.js (express) server:
+    // =================================
+    const app = express();
+    app.set('port', config.get('port'));
 
-// middleware smthg else
-// app.use(function(req, res) {
-//     res.send(404, 'Page not found sorry')
-// });
-// const port = 5000;
+    // app.all('/*', function(req, res) {
+    //     res.send('process ' + process.pid + ' says hello!').end();
+    // })
 
-app.listen(app.get('port'), () =>
-    log.info('Server started on port ' + app.get('port'))
-);
+    //get static contentt processing module
+    var StaticContent = require("./static_content_processing");
+    // deal with Access-Control-Allow-Origin bag on client request
+    app.use(function(req, res, next) {
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+        next();
+    });
+    // middleware '/api/places'
+    app.use((req, res, next) => {
+        if (req.url == '/api/places') {
+            //create static content processing module
+            var staticContent = new StaticContent(req, res);
+            // get stat. content and perform response to front-end
+            var type = 'places';
+            staticContent.getStaticContent(type);
+        } else {
+            // let's go to next middleware
+            next();
+        }
+    });
+
+    app.listen(app.get('port'), () => {
+        log.info('Server started on port ' + app.get('port'));
+        log.info('Process ' + process.pid + ' is listening to all incoming requests on port ' + app.get('port'));
+    });
+    // ================================================
+}
